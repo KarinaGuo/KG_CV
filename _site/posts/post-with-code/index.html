@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.475">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2023-04-24">
+
+<title>Karina Guo - Generating and Analysing My Massive ML Data</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Karina Guo</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">About Me</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/KarinaGuo"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/dandy_gumnut"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.instagram.com/crunchy_dandelion/"><i class="bi bi-instagram" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Generating and Analysing My Massive ML Data</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">code</div>
+                <div class="quarto-category">project</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 24, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="using-machine-learning-to-link-climate-phylogeny-and-leaf-area-in-eucalypts-through-a-50-fold-expansion-of-current-leaf-trait-datasets" class="level2">
+<h2 class="anchored" data-anchor-id="using-machine-learning-to-link-climate-phylogeny-and-leaf-area-in-eucalypts-through-a-50-fold-expansion-of-current-leaf-trait-datasets">Using Machine Learning to Link Climate, Phylogeny and Leaf Area in Eucalypts Through a 50-fold Expansion of Current Leaf Trait Datasets</h2>
+<blockquote class="blockquote">
+<p>To look at the source code, feel free to check out my <a href="https://github.com/KarinaGuo/Machine_Learning_in_Computer_Vision_for_Leaf_Traits">GitHub</a></p>
+</blockquote>
+<p>My project involved three key parts:</p>
+<ol type="1">
+<li>Prepare my data for training, validating, and testing my machine learning models</li>
+<li>My two machine learning models were then created with the datasets</li>
+<li>I used my machine learning models to make my dataset which was analysed for trends</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="workflow.jpg" class="img-fluid figure-img" alt="Workflow of project"></p>
+<p></p><figcaption class="figure-caption">Figure 1. Workflow of project</figcaption><p></p>
+</figure>
+</div>
+<p>
+</p><p>&nbsp;</p>
+<p>
+</p><section id="generating-my-dataset-for-my-first-model" class="level4">
+<h4 class="anchored" data-anchor-id="generating-my-dataset-for-my-first-model">Generating my dataset for my first model</h4>
+<p>To build a good machine learning model, I needed a well-annotated training dataset to train, optimise and evaluate my model. In my case, this was done through <em>manual annotation</em> of herbarium sheets (archived pressed plant images). Manual annotation is essentially me telling the machine learning model what to ‘learn’, and looked like spending <strong>hours</strong> tracing the outlines of leaves on these sheets.</p>
+<p>The annotated datasets were then divided into three sets: the <em>training</em> set, the <em>validating</em> set, and the <em>testing</em> set.</p>
+<ul>
+<li><p>Training Set: Used to train the model by showing it what pixels represented a leaf on a herbarium sheet.</p></li>
+<li><p>Validating Set: Employed to optimise the model’s hyperparameters and ensure proper it generalises well on unseen data.</p></li>
+<li><p>Testing Set: Used to evaluate the model’s performance and accuracy</p>
+<p>
+</p><p>&nbsp;</p>
+<p></p></li>
+</ul>
+</section>
+<section id="the-first-model-a-leaf-segmentation-model" class="level4">
+<h4 class="anchored" data-anchor-id="the-first-model-a-leaf-segmentation-model">The first model, a leaf segmentation model</h4>
+<p>This first model I created was aimed to <em>segment</em> leaves from herbarium sheets; to create <em>masks</em> of the pixels that represent each individual leaf, as in This process involved a cycle of optimisation. First, feed in the training and validating dataset with initial <em>training parameters</em>. These parameters shaped how the model learnt. Then, evaluate the quality of the first iteration of the model.</p>
+<p>This step involved both qualitative and quantitative metrics. Qualitative metrics were looking at all the predicted herbarium sheets, like in Figure 2, and judging how it went. Did it do poorly on small leaves? Worse on broken leaves? And, so forth. Using these metrics I judged what needed to be amended in the training dataset for the next iteration. Similarly, quantitative metrics involved calculating values such as <em>Precision</em>, <em>Recall</em>, and <em>F1-score</em>&nbsp;which are measures of true positives, false negatives, etc. that are standardised in the machine learning field. From these metrics, I then changed the training dataset the model needed to improve it for the next iteration.</p>
+<p>Once I’ve done more painstaking labelling of the training dataset, and tweaked the training parameters, I embarked the model on the second iteration. Training a brand new model and conducting the evaluation metrics again. I kept repeating this cycle until I was satisfied with the quality of the model.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figure2.jpg" class="img-fluid figure-img" width="386"></p>
+<p></p><figcaption class="figure-caption">Figure 2. Predicted herbarium sheet, each colour is a separate leaf mask</figcaption><p></p>
+</figure>
+</div>
+<p>
+</p><p>&nbsp;</p>
+<p>
+</p></section>
+<section id="the-second-model-a-leaf-classifier-model" class="level4">
+<h4 class="anchored" data-anchor-id="the-second-model-a-leaf-classifier-model">The second model, a leaf classifier model</h4>
+<p>To enhance the quality and accuracy of my workflow, I then developed a leaf classifier model. This model acted as an additional layer of filtration, classifying the output of the segmentation model into valid and invalid leaves.</p>
+<p>Using the segmented leaf images generated by the first model, I manually annotated the images to create the necessary datasets for training, validating, and testing the leaf classifier model. Here, manual annotation involved me categorising leaf images generated by the first model as valid and invalid leaves. Then, like before, separating those images into the three datasets.</p>
+<p>Once again, the creation of this model involved optimisation. Iterations of this machine learning model was crucial in ensuring the model was of apt quality and could accurately identify valid leaves.</p>
+<table class="table">
+<caption>Figure 3. Example of valid and invalid leaf</caption>
+<colgroup>
+<col style="width: 48%">
+<col style="width: 51%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="Valid leaf.jpg" class="img-fluid" data-fig-align="center" width="183" alt="Valid leaf"><br>
+Valid leaf</td>
+<td style="text-align: center;"><img src="Invalid leaf.jpg" class="img-fluid" data-fig-align="center" width="269" alt="Invalid leaf"><br>
+Invalid leaf</td>
+</tr>
+</tbody>
+</table>
+<p>
+</p><p>&nbsp;</p>
+<p>
+</p></section>
+<section id="applying-the-models-to-generate-a-massive-dataset" class="level4">
+<h4 class="anchored" data-anchor-id="applying-the-models-to-generate-a-massive-dataset">Applying the models to generate a massive dataset</h4>
+<p>After being satisfied with both models, I applied them to the remaining herbarium images. This process generated a massive dataset, comprising of approximately 130,000 data points. The size of this dataset was 50 times larger than the previous datasets. This gave me an amazing framework where I could ask so many more questions during the analysis. It greatly expanded the sampling done at both a taxonomic level (inter- and intra- specific sampling), and at a spatial scale across Australia, to a degree not done before.</p>
+<p>
+</p><p>&nbsp;</p>
+<p>
+</p></section>
+<section id="analysing-the-dataset" class="level4">
+<h4 class="anchored" data-anchor-id="analysing-the-dataset">Analysing the dataset</h4>
+<p>The final step in my project involved analysing the massive dataset created by the machine learning models. This dataset contained detailed information about the leaves, including their leaf area, leaf curvature and the size of the largest in-circle. As each herbarium sheet had their collection latitude and longitude I could then map it to climate, and see how the leaf traits changed across various variables. Furthermore, with their indepth taxonomic sampling, for the first time in literature, I explored how the leaf trait varied across the eucalypt taxonomy.</p>
+<p>For a detailed analysis of the trends and patterns discovered in the dataset, check out my next blog post, where I share my novel findings and pretty graphs.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
