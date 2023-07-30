@@ -2,7 +2,7 @@
 title: "Project on Machine Learning and Leaf Trait Pt. 2"
 date: "2023-04-25"
 categories: [code, project]
-image: "ML_distribution.JPG"
+image: "image.JPG"
 ---
 
 ## Using Machine Learning to Link Climate, Phylogeny and Leaf Area in Eucalypts Through a 50-fold Expansion of Current Leaf Trait Datasets *Part 2*
