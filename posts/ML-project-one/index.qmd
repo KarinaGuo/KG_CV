@@ -1,13 +1,17 @@
 ---
-title: "Generating and Analysing My Massive ML Data"
+title: "Project on Machine Learning and Leaf Trait Pt. 1"
 date: "2023-04-24"
 categories: [code, project]
 image: "image.jpg"
 ---
 
-## Using Machine Learning to Link Climate, Phylogeny and Leaf Area in Eucalypts Through a 50-fold Expansion of Current Leaf Trait Datasets
+## Using Machine Learning to Link Climate, Phylogeny and Leaf Area in Eucalypts Through a 50-fold Expansion of Current Leaf Trait Datasets *Part 1*
+
+This is Part 1 of 2, where I briefly go through how I made my machine learning models, and what they do
 
 > To look at the source code, feel free to check out my [GitHub](https://github.com/KarinaGuo/Machine_Learning_in_Computer_Vision_for_Leaf_Traits)
+
+### Introduction
 
 My project involved three key parts:
 
@@ -49,7 +53,7 @@ This step involved both qualitative and quantitative metrics. Qualitative metric
 
 Once I've done more painstaking labelling of the training dataset, and tweaked the training parameters, I embarked the model on the second iteration. Training a brand new model and conducting the evaluation metrics again. I kept repeating this cycle until I was satisfied with the quality of the model.
 
-![Figure 2. Predicted herbarium sheet, each colour is a separate leaf mask](Figure2.jpg){width="386"}
+![Figure 2. Predicted herbarium sheet, each colour is a separate leaf mask](Figure2.jpg){fig-align="center" width="386"}
 
 <p>
 
@@ -93,3 +97,7 @@ After being satisfied with both models, I applied them to the remaining herbariu
 The final step in my project involved analysing the massive dataset created by the machine learning models. This dataset contained detailed information about the leaves, including their leaf area, leaf curvature and the size of the largest in-circle. As each herbarium sheet had their collection latitude and longitude I could then map it to climate, and see how the leaf traits changed across various variables. Furthermore, with their indepth taxonomic sampling, for the first time in literature, I explored how the leaf trait varied across the eucalypt taxonomy.
 
 For a detailed analysis of the trends and patterns discovered in the dataset, check out my next blog post, where I share my novel findings and pretty graphs.
+
+#### Funders
+
+![](Funders.png){fig-alt="Funders; UNSW, ReCER, BGSyd" fig-align="center"}

@@ -1,5 +1,5 @@
 ---
-title: "CV_Web_QuartoBlog"
+title: "Welcome!"
 listing:
   contents: posts
   sort: "date desc"

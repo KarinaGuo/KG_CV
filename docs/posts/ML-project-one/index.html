@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.475">
+<meta name="generator" content="quarto-1.3.433">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2023-04-24">
 
-<title>Karina Guo - Generating and Analysing My Massive ML Data</title>
+<title>Karina Guo - Project on Machine Learning and Leaf Trait Pt. 1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -18,7 +18,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -56,7 +56,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -75,32 +76,34 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Karina Guo</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/KarinaGuo"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/KarinaGuo" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/dandy_gumnut"><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/dandy_gumnut" rel="" target=""><i class="bi bi-twitter" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.instagram.com/crunchy_dandelion/"><i class="bi bi-instagram" role="img">
+    <a class="nav-link" href="https://www.instagram.com/crunchy_dandelion/" rel="" target=""><i class="bi bi-instagram" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -109,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Generating and Analysing My Massive ML Data</h1>
+      <h1 class="title">Project on Machine Learning and Leaf Trait Pt. 1</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">code</div>
                 <div class="quarto-category">project</div>
@@ -142,8 +145,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="using-machine-learning-to-link-climate-phylogeny-and-leaf-area-in-eucalypts-through-a-50-fold-expansion-of-current-leaf-trait-datasets" class="level2">
-<h2 class="anchored" data-anchor-id="using-machine-learning-to-link-climate-phylogeny-and-leaf-area-in-eucalypts-through-a-50-fold-expansion-of-current-leaf-trait-datasets">Using Machine Learning to Link Climate, Phylogeny and Leaf Area in Eucalypts Through a 50-fold Expansion of Current Leaf Trait Datasets</h2>
+<section id="using-machine-learning-to-link-climate-phylogeny-and-leaf-area-in-eucalypts-through-a-50-fold-expansion-of-current-leaf-trait-datasets-part-1" class="level2">
+<h2 class="anchored" data-anchor-id="using-machine-learning-to-link-climate-phylogeny-and-leaf-area-in-eucalypts-through-a-50-fold-expansion-of-current-leaf-trait-datasets-part-1">Using Machine Learning to Link Climate, Phylogeny and Leaf Area in Eucalypts Through a 50-fold Expansion of Current Leaf Trait Datasets <em>Part 1</em></h2>
+<p>This is Part 1 of 2, where I briefly go through how I made my machine learning models, and what they do</p>
 <blockquote class="blockquote">
 <p>To look at the source code, feel free to check out my <a href="https://github.com/KarinaGuo/Machine_Learning_in_Computer_Vision_for_Leaf_Traits">GitHub</a></p>
 </blockquote>
@@ -156,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="workflow.jpg" class="img-fluid figure-img" alt="Workflow of project"></p>
-<p></p><figcaption class="figure-caption">Figure 1. Workflow of project</figcaption><p></p>
+<figcaption class="figure-caption">Figure 1. Workflow of project</figcaption>
 </figure>
 </div>
 <p>
@@ -183,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Figure2.jpg" class="img-fluid figure-img" width="386"></p>
-<p></p><figcaption class="figure-caption">Figure 2. Predicted herbarium sheet, each colour is a separate leaf mask</figcaption><p></p>
+<figcaption class="figure-caption">Figure 2. Predicted herbarium sheet, each colour is a separate leaf mask</figcaption>
 </figure>
 </div>
 <p>
@@ -225,6 +229,14 @@ Invalid leaf</td>
 <h4 class="anchored" data-anchor-id="analysing-the-dataset">Analysing the dataset</h4>
 <p>The final step in my project involved analysing the massive dataset created by the machine learning models. This dataset contained detailed information about the leaves, including their leaf area, leaf curvature and the size of the largest in-circle. As each herbarium sheet had their collection latitude and longitude I could then map it to climate, and see how the leaf traits changed across various variables. Furthermore, with their indepth taxonomic sampling, for the first time in literature, I explored how the leaf trait varied across the eucalypt taxonomy.</p>
 <p>For a detailed analysis of the trends and patterns discovered in the dataset, check out my next blog post, where I share my novel findings and pretty graphs.</p>
+</section>
+<section id="funders" class="level4">
+<h4 class="anchored" data-anchor-id="funders">Funders</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Funders.png" class="img-fluid figure-img" alt="Funders; UNSW, ReCER, BGSyd"></p>
+</figure>
+</div>
 
 
 </section>
@@ -258,9 +270,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -325,6 +351,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
