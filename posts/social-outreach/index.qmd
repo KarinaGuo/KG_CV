@@ -42,18 +42,14 @@ Amazing symposium on weeds and genetics. Who knew the Lantana complex was made o
 ::: {style="padding:16px;"}
 <a href="https://www.instagram.com/p/Cudn7GTPx9i/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
 
-::: {style=" display: flex; flex-direction: row; align-items: center;"}
-::: {style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"}
+::: {style=" display: flex; flex-direction: row; align-items: center;"} ::: {style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"}
 :::
 
 ::: {style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"}
 ::: {style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"}
 :::
 
-::: {style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"}
-:::
-:::
-:::
+::: {style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"} ::: ::: :::
 
 ::: {style="padding: 19% 0;"}
 :::
@@ -67,9 +63,9 @@ Amazing symposium on weeds and genetics. Who knew the Lantana complex was made o
 :::
 
 ::: {style="padding-top: 8px;"}
-::: {style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"}
-View this post on Instagram
+::: {style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"} View this post on Instagram
 :::
+
 :::
 
 ::: {style="padding: 12.5% 0;"}
@@ -95,27 +91,22 @@ View this post on Instagram
 
 ::: {style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"}
 :::
+
 :::
 
 ::: {style="margin-left: auto;"}
 ::: {style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"}
 :::
 
-::: {style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"}
-:::
+::: {style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"} :::
 
-::: {style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"}
-:::
-:::
-:::
+::: {style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"} ::: ::: :::
 
 ::: {style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"}
 ::: {style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"}
 :::
 
-::: {style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"}
-:::
-:::
+::: {style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"} ::: :::
 
 </a>
 
@@ -124,6 +115,7 @@ View this post on Instagram
 <a href="https://www.instagram.com/p/Cudn7GTPx9i/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by @crunchy_dandelion</a>
 
 </p>
+
 :::
 
 </blockquote>
@@ -181,18 +173,14 @@ Thanks for having me and helping us spread the word about restore and renew to t
 ::: {style="padding:16px;"}
 <a href="https://www.instagram.com/p/CtyVFB2vAsn/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
 
-::: {style=" display: flex; flex-direction: row; align-items: center;"}
-::: {style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"}
+::: {style=" display: flex; flex-direction: row; align-items: center;"} ::: {style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"}
 :::
 
 ::: {style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"}
 ::: {style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"}
 :::
 
-::: {style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"}
-:::
-:::
-:::
+::: {style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"} ::: ::: :::
 
 ::: {style="padding: 19% 0;"}
 :::
@@ -206,9 +194,9 @@ Thanks for having me and helping us spread the word about restore and renew to t
 :::
 
 ::: {style="padding-top: 8px;"}
-::: {style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"}
-View this post on Instagram
+::: {style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"} View this post on Instagram
 :::
+
 :::
 
 ::: {style="padding: 12.5% 0;"}
@@ -234,27 +222,22 @@ View this post on Instagram
 
 ::: {style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"}
 :::
+
 :::
 
 ::: {style="margin-left: auto;"}
 ::: {style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"}
 :::
 
-::: {style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"}
-:::
+::: {style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"} :::
 
-::: {style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"}
-:::
-:::
-:::
+::: {style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"} ::: ::: :::
 
 ::: {style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"}
 ::: {style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"}
 :::
 
-::: {style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"}
-:::
-:::
+::: {style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"} ::: :::
 
 </a>
 
@@ -263,6 +246,7 @@ View this post on Instagram
 <a href="https://www.instagram.com/p/CtyVFB2vAsn/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by @crunchy_dandelion</a>
 
 </p>
+
 :::
 
 </blockquote>
@@ -300,4 +284,3 @@ Here's what my machine learning model does. It finds the pixels of leaves on the
 ```{=html}
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 ```
-Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.

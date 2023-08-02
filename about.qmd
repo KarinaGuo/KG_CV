@@ -96,7 +96,7 @@ Technical Officer Biodiversity Genomics</summary>
 
 <details>
 
-<summary>**International Genetically Engineered Machine (iGEM) Competition (Team UNSW Protecc Coral)**</summary>
+<summary>**International Genetically Engineered Machine (iGEM) Competition ([Team UNSW Protecc Coral](https://2021.igem.org/Team:UNSW_Australia))**</summary>
 
 -   Working as the team leader in the sub-group, Science Communication, as crucial section of a larger team of 15 individuals
 
