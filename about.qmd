@@ -32,13 +32,14 @@ about:
 *University of New South Wales* (2019-2023)\
 Bacherlor's of Advanced Science (Hons.) major in Ecology and minor in Chemistry
 
--   First Class Honours
--   2021 Faculty of Science Dean's List
--   University Medal in Ecology
+-   First Class Honours in Ecology
+-   Faculty of Science Dean\'s List (2021)
+-   University Medal for Ecology (2023)
 -   WAM: 88.625 / GPA: 6.83
 
 *Cheltenham Girl's High School* (2012-2018)
 
+-   All-round Achievers (2019)
 -   ATAR: 98.05
 
 ## [**Current Occupation**]{.underline}
@@ -52,13 +53,15 @@ Technical Officer Biodiversity Genomics</summary>
 
 -   Refactoring of the genetics processing of DArT SNP data for the [Restore and Renew (RnR) webtool](https://www.restore-and-renew.org.au/). Involved version control using Git, containerising the RnR genetics workflow on Docker, multi-stage builds of workflow, supporting project development, and outreach. Showed proficiency in collaborating with other team members to enhance existing workflows and develop new features for future pathways of the tool.
 
--   Managing \~70,000 samples through databasing collection information, maintenance and organisation of their storage. Processing of incoming material in preparation of new samples and vouchers.
+-   Manipulation of genetic data for further analysis including variant calling and filtering.
 
--   Applied engagement in concepts of genetics including conducting GWAS on individuals of Melaleuca quinquenervia to discover markers that signify rust resistance
+-   Conducting GWAS on individuals of *Melaleuca quinquenervia* to discover markers that signify rust resistance
+
+-   Managing \~70,000 samples through databasing collection information, maintenance, and organisation of their storage. Processing of incoming material in preparation of new samples and vouchers.
 
 -   Engaging in field work trips to help gather genetic samples. Involves learning flora identification skills, scheduling appropriate accommodation, and following WHS protocols.
 
--   Rapid selection and preparation of samples to send to Diversity Arrays Technology for genetic sampling
+-   Rapid selection and preparation of samples to send to Diversity Arrays Technology (DArT) for genotyping
 
 -   Outreach at conferences for external points of collaboration across states of Australia and feedback on procedures and workflows
 
@@ -78,7 +81,7 @@ Technical Officer Biodiversity Genomics</summary>
 
 <details>
 
-<summary>**Honours, Automating the Measurement of Leaf Traits from Herbarium Sheets of Eucalypts using Machine Learning**</summary>
+<summary>**Honours, Automating the Measurement of Leaf Traits from Herbarium Sheets of Eucalypts using Machine Learning.** DOI: [**https://doi.org/10.32942/X2DG6F**](https://doi.org/10.32942/X2DG6F)\</summary\>
 
 -   Gained expertise in the field of machine learning (ML) and working with various coding languages including R, python, and BASH.
 
@@ -122,7 +125,7 @@ Technical Officer Biodiversity Genomics</summary>
 
 </details>
 
-## [**Volunteer Work**]{.underline}
+## [**Volunteer Work & Student Activities**]{.underline}
 
 **Biodiversity Conservation Trust** *(2022)*
 
@@ -133,6 +136,10 @@ Technical Officer Biodiversity Genomics</summary>
 
 **Parramatta Bushcare Volunteer** *(2018, 2022-2023)*
 
+**Talented Student Program (TSP) at UNSW**
+
+-   Participated in a range of different workshops that focused on developing skills surrounding leadership, academia, networking, and presentations
+
 ## [**Past Work Experiences**]{.underline}
 
 <details>
@@ -140,9 +147,15 @@ Technical Officer Biodiversity Genomics</summary>
 <summary>**Gro Urban Oasis: Castle Towers** *(February 2020 -- March 2022)\
 Sales Assistant*</summary>
 
--   Interacting with customers to build a relationship and build a safe environment
+-   Proactively working towards campaign development
+
+-   Interacting with customers to build a relationship and build a safe environment for respect
 
 -   Developing social skills and encouragement of open-mindedness in customers to new ideas
+
+-   Utilising a strong background knowledge on plant care and maintenance to advise customers and ensure upkeep of merchandise
+
+-   Accurately scanning large volumes of products to meet daily sale goals, and promoting seasonal deals and themes
 
 </details>
 
