@@ -33,7 +33,7 @@ about:
 Bacherlor's of Advanced Science (Hons.) major in Ecology and minor in Chemistry
 
 -   First Class Honours in Ecology
--   Faculty of Science Dean\'s List (2021)
+-   Faculty of Science Dean's List (2021)
 -   University Medal for Ecology (2023)
 -   WAM: 88.625 / GPA: 6.83
 
@@ -81,7 +81,9 @@ Technical Officer Biodiversity Genomics</summary>
 
 <details>
 
-<summary>**Honours, Automating the Measurement of Leaf Traits from Herbarium Sheets of Eucalypts using Machine Learning.** DOI: [**https://doi.org/10.32942/X2DG6F**](https://doi.org/10.32942/X2DG6F)\</summary\>
+<summary>
+
+**Honours, Automating the Measurement of Leaf Traits from Herbarium Sheets of Eucalypts using Machine Learning.** DOI: [**https://doi.org/10.32942/X2DG6F**](https://doi.org/10.32942/X2DG6F)\</summary\>
 
 -   Gained expertise in the field of machine learning (ML) and working with various coding languages including R, python, and BASH.
 
