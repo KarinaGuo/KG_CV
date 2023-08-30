@@ -81,9 +81,7 @@ Technical Officer Biodiversity Genomics</summary>
 
 <details>
 
-<summary>
-
-**Honours, Automating the Measurement of Leaf Traits from Herbarium Sheets of Eucalypts using Machine Learning.** DOI: [**https://doi.org/10.32942/X2DG6F**](https://doi.org/10.32942/X2DG6F)\</summary\>
+<summary> **Honours, Automating the Measurement of Leaf Traits from Herbarium Sheets of Eucalypts using Machine Learning.** DOI: [**https://doi.org/10.32942/X2DG6F**](https://doi.org/10.32942/X2DG6F) </summary>
 
 -   Gained expertise in the field of machine learning (ML) and working with various coding languages including R, python, and BASH.
 
