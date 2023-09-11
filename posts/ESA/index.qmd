@@ -2,7 +2,7 @@
 title: "ESA 2023"
 date: "2023-08-24"
 categories: [outreach]
-image: "image.jpg"
+image: "darwin.jpg"
 ---
 
 ## Conference: Ecological Society of Australia 2023
@@ -11,9 +11,9 @@ Everytime I go to a conference I'm always amazed at the wide diversity of both p
 
 At ESA2023 I was given the opportunity to talk about the project I'd been working on at the Research Centre for Ecosystem Resilience at the Botanic Gardens of Sydney. The number of people that came up to talk about the work, and to tell me that my talk went well was heart touching.
 
+<center>
 
-
-<center><blockquote class="twitter-tweet">
+<blockquote class="twitter-tweet">
 
 <p lang="en" dir="ltr">
 
@@ -23,12 +23,13 @@ Thanks for having me and helping us spread the word about restore and renew to t
 
 --- Karina Guo (she/her) (@dandy_gumnut) <a href="https://twitter.com/dandy_gumnut/status/1676461220797513731?ref_src=twsrc%5Etfw">July 5, 2023</a>
 
-</blockquote></center>
+</blockquote>
+
+</center>
 
 ```{=html}
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 ```
-
 I'll always be grateful for the networking that was made possible by such events. I've met people I never thought I would come into contact with. People who have been in the field for decades, to people who are just like me. Regardless, of their ages they've become a familiar face in this sea of unknown. Conversations with them, (gifts even!), will be something I cherish for long.
 
 ```{r}
@@ -41,21 +42,49 @@ carousel("gallery-carousel", 5000,
 
 Other than that, wow Darwin offered so many beautiful sunsets and sunrises. The number of beaches in a walkable distance was definitely appreciated. Going for a morning run to visit a new beach each morning was amazing for my mental health (and probably physical with how much I ate, I still can't say no to free food). I'm glad I even had time to go bird spotting even with my busy schedule, they were absolutely gorgeous with their colourful plumes.
 
-
 <div class="image-grid">
-  <div class="image"><img src="Images/figbird.jpg"></div>
-  <div class="image"><img src="Images/finch.jpg"></div>
-  <div class="image"><img src="Images/ibis.jpg"></div>
-  <div class="image"><img src="Images/kookaburra.jpg"></div>
-  <div class="video"><video autoplay loop muted controls><source src="Images/oriole.mp4" type="video/mp4"><video>
-  </div>
-  <div class="image"><img src="Images/curlew.jpg"></div>
-  <div class="image"><img src="Images/woodswallow.jpg"></div>
-  <div class="image"><img src="Images/honeyeater.jpg"></div>
-  <div class="image"><img src="Images/rainbow_honeyeater.jpg">
+
+::: image
+<img src="Images/figbird.jpg"/>
+:::
+
+::: image
+<img src="Images/finch.jpg"/>
+:::
+
+::: image
+<img src="Images/ibis.jpg"/>
+:::
+
+::: image
+<img src="Images/kookaburra.jpg"/>
+:::
+
+<div class="video">
+
+<video autoplay loop muted controls>
+
+<source src="Images/oriole.mp4" type="video/mp4">
+
+<video>
+
 </div>
 
+::: image
+<img src="Images/curlew.jpg"/>
+:::
 
+::: image
+<img src="Images/woodswallow.jpg"/>
+:::
+
+::: image
+<img src="Images/honeyeater.jpg"/>
+:::
+
+::: image
+<img src="Images/rainbow_honeyeater.jpg"/>
+:::
 
 ```{=html}
 <style>

@@ -249,41 +249,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="do">### The below tries different methods to extract the UID per artist. The final output is a dataframe that links artists to their UID. If no UID is found for the artists, they are likely a podcast/show.</span></span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>artist_list <span class="ot">=</span> <span class="cn">NULL</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span> (str_hist_all_artists)){</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span> (<span class="fu">paste</span> (<span class="st">"Running"</span>, i, <span class="st">"out of"</span>, <span class="fu">length</span>(str_hist_all_artists)))</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">exists</span> (<span class="st">"artist"</span>)) {<span class="fu">remove</span> (artist)}</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">exists</span> (<span class="st">"artist_ID"</span>)) {<span class="fu">remove</span> (artist_ID)}</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  artist_info <span class="ot">=</span> <span class="cn">NA</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  artist <span class="ot">&lt;-</span> str_hist_all_artists[i]</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  artist_search <span class="ot">&lt;-</span> <span class="fu">search_spotify</span> (artist, <span class="at">type =</span> <span class="st">"artist"</span>)</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> ( <span class="fu">nrow</span> (artist_search) <span class="sc">!=</span> <span class="dv">0</span> ) {<span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span> (artist_search)) {</span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (artist_search[j,<span class="dv">5</span>] <span class="sc">==</span> artist) {</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>      artist_ID <span class="ot">&lt;-</span> <span class="fu">as.character</span> (artist_search[j,<span class="dv">3</span>])}}}</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">exists</span> (<span class="st">"artist_ID"</span>) <span class="sc">==</span> <span class="cn">TRUE</span>) {</span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">tryCatch</span> ({<span class="fu">get_artist</span> (artist_ID)<span class="sc">$</span>name <span class="sc">==</span> artist}, <span class="at">error =</span> <span class="cf">function</span>(e) {<span class="cn">FALSE</span>})){</span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>      artist_list <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span> (<span class="fu">rbind</span> (artist_list, <span class="fu">cbind</span> (artist, artist_ID)))</span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>      } <span class="cf">else</span> {</span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>        artist_ID <span class="ot">=</span> <span class="cn">NA</span></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>        artist_list <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span> (<span class="fu">rbind</span> (artist_list, <span class="fu">cbind</span> (artist, artist_ID)))}}</span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">exists</span> (<span class="st">"artist_ID"</span>) <span class="sc">==</span> <span class="cn">FALSE</span>) {</span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tryCatch</span>({</span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>      artist_info <span class="ot">&lt;-</span> <span class="fu">get_artist_audio_features</span> (artist)</span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    }, <span class="at">error =</span> <span class="cf">function</span>(e) {</span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>      artist_info <span class="ot">&lt;-</span> <span class="fu">get_artist_audio_features</span> (artist, <span class="at">include_groups =</span> <span class="st">"single"</span>)</span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>    }, <span class="at">error =</span> <span class="cf">function</span>(e2) {artist_info <span class="ot">=</span> <span class="cn">NA</span>})</span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">exists</span> (<span class="st">"artist_info"</span>) <span class="sc">==</span> <span class="cn">TRUE</span>) {</span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>      artist_ID <span class="ot">&lt;-</span> <span class="fu">tryCatch</span> (artist_info<span class="sc">$</span>artist_id[<span class="dv">1</span>], <span class="at">error =</span> <span class="cf">function</span>(e) {</span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>        artist_info<span class="sc">$</span>artist_id[<span class="dv">2</span>]</span>
-<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>      }, <span class="at">error =</span> <span class="cf">function</span>(e2) {</span>
-<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="sc">!</span><span class="fu">exists</span> (<span class="st">"artist_ID"</span>)) {artist_ID <span class="ot">&lt;-</span> <span class="cn">NA</span>}})}</span>
-<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">exists</span> (<span class="st">"artist_ID"</span>) <span class="sc">==</span> <span class="cn">TRUE</span>) {</span>
-<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="fu">tryCatch</span> ({<span class="fu">get_artist</span> (artist_ID)<span class="sc">$</span>name <span class="sc">==</span> artist}, <span class="at">error =</span> <span class="cf">function</span>(e) {<span class="cn">FALSE</span>})){</span>
-<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>        artist_list <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span> (<span class="fu">rbind</span> (artist_list, <span class="fu">cbind</span> (artist, artist_ID)))</span>
-<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>        } <span class="cf">else</span> {</span>
-<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>          artist_ID <span class="ot">=</span> <span class="cn">NA</span></span>
-<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>          artist_list <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span> (<span class="fu">rbind</span> (artist_list, <span class="fu">cbind</span> (artist, artist_ID)))}}}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="at">lartist_list =</span> <span class="cn">NULL</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span> (str_hist_all_artists)){</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span> (<span class="fu">paste</span> (<span class="st">"Running"</span>, i, <span class="st">"out of"</span>, <span class="fu">length</span>(str_hist_all_artists)))</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">exists</span> (<span class="st">"artist"</span>)) {<span class="fu">remove</span> (artist)}</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">exists</span> (<span class="st">"artist_ID"</span>)) {<span class="fu">remove</span> (artist_ID)}</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  artist_info <span class="ot">=</span> <span class="cn">NA</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  artist <span class="ot">&lt;-</span> str_hist_all_artists[i]</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  artist_search <span class="ot">&lt;-</span> <span class="fu">search_spotify</span> (artist, <span class="at">type =</span> <span class="st">"artist"</span>)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> ( <span class="fu">nrow</span> (artist_search) <span class="sc">!=</span> <span class="dv">0</span> ) {<span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span> (artist_search)) {</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (artist_search[j,<span class="dv">5</span>] <span class="sc">==</span> artist) {</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>      artist_ID <span class="ot">&lt;-</span> <span class="fu">as.character</span> (artist_search[j,<span class="dv">3</span>])}}}</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">exists</span> (<span class="st">"artist_ID"</span>) <span class="sc">==</span> <span class="cn">TRUE</span>) {</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">tryCatch</span> ({<span class="fu">get_artist</span> (artist_ID)<span class="sc">$</span>name <span class="sc">==</span> artist}, <span class="at">error =</span> <span class="cf">function</span>(e) {<span class="cn">FALSE</span>})){</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>      artist_list <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span> (<span class="fu">rbind</span> (artist_list, <span class="fu">cbind</span> (artist, artist_ID)))</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>      } <span class="cf">else</span> {</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>        artist_ID <span class="ot">=</span> <span class="cn">NA</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>        artist_list <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span> (<span class="fu">rbind</span> (artist_list, <span class="fu">cbind</span> (artist, artist_ID)))}}</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">exists</span> (<span class="st">"artist_ID"</span>) <span class="sc">==</span> <span class="cn">FALSE</span>) {</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tryCatch</span>({</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>      artist_info <span class="ot">&lt;-</span> <span class="fu">get_artist_audio_features</span> (artist)</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>    }, <span class="at">error =</span> <span class="cf">function</span>(e) {</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>      artist_info <span class="ot">&lt;-</span> <span class="fu">get_artist_audio_features</span> (artist, <span class="at">include_groups =</span> <span class="st">"single"</span>)</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>    }, <span class="at">error =</span> <span class="cf">function</span>(e2) {artist_info <span class="ot">=</span> <span class="cn">NA</span>})</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">exists</span> (<span class="st">"artist_info"</span>) <span class="sc">==</span> <span class="cn">TRUE</span>) {</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>      artist_ID <span class="ot">&lt;-</span> <span class="fu">tryCatch</span> (artist_info<span class="sc">$</span>artist_id[<span class="dv">1</span>], <span class="at">error =</span> <span class="cf">function</span>(e) {</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>        artist_info<span class="sc">$</span>artist_id[<span class="dv">2</span>]</span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>      }, <span class="at">error =</span> <span class="cf">function</span>(e2) {</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="sc">!</span><span class="fu">exists</span> (<span class="st">"artist_ID"</span>)) {artist_ID <span class="ot">&lt;-</span> <span class="cn">NA</span>}})}</span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">exists</span> (<span class="st">"artist_ID"</span>) <span class="sc">==</span> <span class="cn">TRUE</span>) {</span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="fu">tryCatch</span> ({<span class="fu">get_artist</span> (artist_ID)<span class="sc">$</span>name <span class="sc">==</span> artist}, <span class="at">error =</span> <span class="cf">function</span>(e) {<span class="cn">FALSE</span>})){</span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>        artist_list <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span> (<span class="fu">rbind</span> (artist_list, <span class="fu">cbind</span> (artist, artist_ID)))</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>        } <span class="cf">else</span> {</span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>          artist_ID <span class="ot">=</span> <span class="cn">NA</span></span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>          artist_list <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span> (<span class="fu">rbind</span> (artist_list, <span class="fu">cbind</span> (artist, artist_ID)))}}}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Now with the artist IDs we can search up their genres and join them into our dataset</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Get genres of artists</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>artist_list_filt <span class="ot">&lt;-</span> artist_list <span class="sc">%&gt;%</span> <span class="fu">filter</span> (<span class="sc">!</span><span class="fu">is.na</span> (artist_ID)) <span class="co"># Removing shows/episodes</span></span>
@@ -323,7 +324,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span> (<span class="at">text =</span> <span class="fu">element_text</span> (<span class="at">size =</span> <span class="dv">50</span>), <span class="at">plot.title =</span> <span class="fu">element_text</span> (<span class="at">hjust =</span> <span class="fl">0.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Plots/summary_of_genres.jpg" class="img-fluid figure-img" width="4000"></p>
+<p><img src="Plots/summary_of_genres.jpg" class="img-fluid figure-img" width="700"></p>
 </figure>
 </div>
 <p>So to properly investigate genres I’ve chosen to merge a few of the genres together. The order of the merging may lead to bias (e.g., indie pop), but what can yah do.</p>
@@ -345,11 +346,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">grepl</span> (<span class="st">"stomp and holler"</span>, str_hist_artists_genre_merge[i,<span class="dv">1</span>], <span class="at">ignore.case =</span> <span class="cn">TRUE</span>)) {merge <span class="ot">=</span> <span class="st">"stomp and holler"</span>}</span>
 <span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  merge_list <span class="ot">&lt;-</span> <span class="fu">append</span> (merge_list, merge)</span>
 <span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>merge_dict <span class="ot">&lt;-</span> <span class="fu">cbind</span> (str_hist_artists_genre_merge[<span class="dv">1</span>], merge_list)</span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span> (merge_dict)[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">"genres_concat"</span></span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="do">## Merging genres by original genre name</span></span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>str_hist_artists_merged <span class="ot">&lt;-</span> <span class="fu">left_join</span> (str_hist_artists, merge_dict, <span class="at">by =</span> <span class="st">"genres_concat"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>merge_dict <span class="ot">&lt;-</span> <span class="fu">cbind</span> (str_hist_artists_genre_merge[<span class="dv">1</span>], merge_list)</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span> (merge_dict)[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">"genres_concat"</span></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="do">## Merging genres by original genre name</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>str_hist_artists_merged <span class="ot">&lt;-</span> <span class="fu">left_join</span> (str_hist_artists, merge_dict, <span class="at">by =</span> <span class="st">"genres_concat"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Now let’s look at some plots!</p>
 <section id="top-100-songs" class="level3">
 <h3 class="anchored" data-anchor-id="top-100-songs">Top 100 songs</h3>
@@ -389,7 +391,7 @@ First we make a frequency table to find how many time each song was played. This
 <span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span> (<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span> </span>
 <span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span> (<span class="fu">aes</span> (<span class="at">label =</span> n), <span class="at">size =</span> <span class="fl">2.5</span>, <span class="at">nudge_y =</span> <span class="dv">100</span>) <span class="sc">+</span></span>
 <span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span> (<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>), <span class="at">legend.position =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span> (<span class="at">title =</span> <span class="st">"Top 50 genres in last 30 days streaming history"</span>, <span class="at">y =</span> <span class="st">"Count"</span>, <span class="at">x =</span> <span class="st">"Genre"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span> (<span class="at">title =</span> <span class="st">"Top 50 genres in last 30 days streaming history"</span>, <span class="at">y =</span> <span class="st">"Count"</span>, <span class="at">x =</span> <span class="st">"Genre"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Plots/top_genres.jpg" class="img-fluid figure-img"></p>
@@ -556,6 +558,11 @@ First we make a frequency table to find how many time each song was played. This
 <span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span> (<span class="fu">aes</span> (<span class="at">label =</span> n), <span class="at">size =</span> <span class="fl">2.5</span>, <span class="at">nudge_y =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
 <span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span> (<span class="at">axis.text.x =</span> <span class="fu">element_text</span> (<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
 <span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span> (<span class="at">fill =</span> <span class="st">"Genres"</span>, <span class="at">title =</span> <span class="st">"Top 100 songs in all streaming history"</span>, <span class="at">y =</span> <span class="st">"Count"</span>, <span class="at">x =</span> <span class="st">"Track"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Plots/extended_top100_songs.jpg" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </section>
 <section id="top-genres-1" class="level3">
 <h3 class="anchored" data-anchor-id="top-genres-1">Top genres</h3>
@@ -587,6 +594,11 @@ First we make a frequency table to find how many time each song was played. This
 <span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span> (<span class="fu">aes</span> (<span class="at">label =</span> n), <span class="at">size =</span> <span class="dv">3</span>, <span class="at">nudge_y =</span> <span class="dv">10</span>) <span class="sc">+</span></span>
 <span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span> (<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>), <span class="at">legend.position =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
 <span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span> (<span class="at">x =</span> <span class="st">"Artists"</span>, <span class="at">y =</span> <span class="st">"Count"</span>, <span class="at">title =</span> <span class="st">"Top 100 artists in all streaming history"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Plots/top100_artists.jpg" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </section>
 <section id="top-10-artists-hours-listened" class="level3">
 <h3 class="anchored" data-anchor-id="top-10-artists-hours-listened">Top 10 artist’s hours listened</h3>

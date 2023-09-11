@@ -166,7 +166,7 @@ ggplot (genre_summ, aes (x = "", y = n, fill = genre_list)) +
   theme (text = element_text (size = 50), plot.title = element_text (hjust = 0.5))
 ```
 
-![](Plots/summary_of_genres.jpg){fig-align="center" width="4000"}
+![](Plots/summary_of_genres.jpg){fig-align="center" width="700"}
 
 So to properly investigate genres I've chosen to merge a few of the genres together. The order of the merging may lead to bias (e.g., indie pop), but what can yah do.
 
