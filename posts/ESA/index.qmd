@@ -1,0 +1,135 @@
+---
+title: "ESA 2023"
+date: "2023-08-24"
+categories: [outreach]
+image: "image.jpg"
+---
+
+## Conference: Ecological Society of Australia 2023
+
+Everytime I go to a conference I'm always amazed at the wide diversity of both people and work that's being done in ecology. It's both a humbling and inspiring moment for me.
+
+At ESA2023 I was given the opportunity to talk about the project I'd been working on at the Research Centre for Ecosystem Resilience at the Botanic Gardens of Sydney. The number of people that came up to talk about the work, and to tell me that my talk went well was heart touching.
+
+
+
+<center><blockquote class="twitter-tweet">
+
+<p lang="en" dir="ltr">
+
+Thanks for having me and helping us spread the word about restore and renew to those who need it! <a href="https://twitter.com/hashtag/ESAus23?src=hash&amp;ref_src=twsrc%5Etfw">#ESAus23</a> <a href="https://twitter.com/EcolSocAus?ref_src=twsrc%5Etfw">@EcolSocAus</a> <a href="https://t.co/xn9YxM2emK">pic.twitter.com/xn9YxM2emK</a>
+
+</p>
+
+--- Karina Guo (she/her) (@dandy_gumnut) <a href="https://twitter.com/dandy_gumnut/status/1676461220797513731?ref_src=twsrc%5Etfw">July 5, 2023</a>
+
+</blockquote></center>
+
+```{=html}
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+```
+
+I'll always be grateful for the networking that was made possible by such events. I've met people I never thought I would come into contact with. People who have been in the field for decades, to people who are just like me. Regardless, of their ages they've become a familiar face in this sea of unknown. Conversations with them, (gifts even!), will be something I cherish for long.
+
+```{r}
+#| echo: false
+#| warning: false
+source("carousel.R")
+carousel("gallery-carousel", 5000, 
+         yaml.load_file("carousel.yml"))
+```
+
+Other than that, wow Darwin offered so many beautiful sunsets and sunrises. The number of beaches in a walkable distance was definitely appreciated. Going for a morning run to visit a new beach each morning was amazing for my mental health (and probably physical with how much I ate, I still can't say no to free food). I'm glad I even had time to go bird spotting even with my busy schedule, they were absolutely gorgeous with their colourful plumes.
+
+
+<div class="image-grid">
+  <div class="image"><img src="Images/figbird.jpg"></div>
+  <div class="image"><img src="Images/finch.jpg"></div>
+  <div class="image"><img src="Images/ibis.jpg"></div>
+  <div class="image"><img src="Images/kookaburra.jpg"></div>
+  <div class="video"><video autoplay loop muted controls><source src="Images/oriole.mp4" type="video/mp4"><video>
+  </div>
+  <div class="image"><img src="Images/curlew.jpg"></div>
+  <div class="image"><img src="Images/woodswallow.jpg"></div>
+  <div class="image"><img src="Images/honeyeater.jpg"></div>
+  <div class="image"><img src="Images/rainbow_honeyeater.jpg">
+</div>
+
+
+
+```{=html}
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+.carousel.card {
+  padding-top: 2em;
+}
+
+.carousel img {
+  width: 70%;
+  margin-bottom: 110px;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  margin-bottom: 110px;
+}
+
+.carousel-caption {
+  padding-top: 1em;
+}
+
+.touch {
+  
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.image {
+  text-align: center;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.video {
+  text-align: center;
+}
+
+.video video {
+  max-width: 100%;
+  height: auto;
+}
+
+</style>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js""></script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').prepend('<div class=\"zoomDiv\"><img src=\"\" class=\"zoomImg\"></div>');
+    // onClick function for all plots (img's)
+    $('img:not(.zoomImg)').click(function() {
+      $('.zoomImg').attr('src', $(this).attr('src')).css({width: '100%'});
+      $('.zoomDiv').css({opacity: '1', width: 'auto', border: '1px solid white', borderRadius: '5px', position: 'fixed', top: '50%', left: '50%', marginRight: '-50%', transform: 'translate(-50%, -50%)', boxShadow: '0px 0px 50px #888888', zIndex: '50', overflow: 'auto', maxHeight: '100%'});
+    });
+    // onClick function for zoomImg
+    $('img.zoomImg').click(function() {
+      $('.zoomDiv').css({opacity: '0', width: '0%'}); 
+    });
+  });
+</script>
+```

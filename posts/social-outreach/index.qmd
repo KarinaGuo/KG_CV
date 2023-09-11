@@ -7,15 +7,40 @@ image: "image.jpg"
 
 This is an embedded output of all my tweets, posts, and whatnot. Occasionally I'll cross post so I've just added the most appropriate outreach method of the content
 
+<blockquote class="twitter-tweet">
 
+<p lang="en" dir="ltr">
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Thank you to everyone who supported my journey through my undergraduate. I could list them as friends, family, supervisors, and whatnot. But at this point, the lines have blurred, friends have become as close as family, and supervisors to friends <a href="https://t.co/ISa3W6PD8a">pic.twitter.com/ISa3W6PD8a</a></p>&mdash; Karina Guo (she/her) (@dandy_gumnut) <a href="https://twitter.com/dandy_gumnut/status/1695926664272777522?ref_src=twsrc%5Etfw">August 27, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+Thank you to everyone who supported my journey through my undergraduate. I could list them as friends, family, supervisors, and whatnot. But at this point, the lines have blurred, friends have become as close as family, and supervisors to friends <a href="https://t.co/ISa3W6PD8a">pic.twitter.com/ISa3W6PD8a</a>
 
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7097448143423774720" height="699" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+</p>
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Loved the networking and tours at <a href="https://twitter.com/AustralianBG?ref_src=twsrc%5Etfw">@AustralianBG</a>. Did y&#39;all know they use medical x-rays to check seed viability.<br><br>Thank you for this amazing mini-conference between <a href="https://twitter.com/EERC_UNSW?ref_src=twsrc%5Etfw">@EERC_UNSW</a> <a href="https://twitter.com/BotanicSydney?ref_src=twsrc%5Etfw">@BotanicSydney</a> and <a href="https://twitter.com/NSWDPE?ref_src=twsrc%5Etfw">@NSWDPE</a>! <a href="https://t.co/XVKxn83g8N">pic.twitter.com/XVKxn83g8N</a></p>&mdash; Karina Guo (she/her) (@dandy_gumnut) <a href="https://twitter.com/dandy_gumnut/status/1694858240461582579?ref_src=twsrc%5Etfw">August 24, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+--- Karina Guo (she/her) (@dandy_gumnut) <a href="https://twitter.com/dandy_gumnut/status/1695926664272777522?ref_src=twsrc%5Etfw">August 27, 2023</a>
 
+</blockquote>
 
+```{=html}
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+```
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7097448143423774720" height="699" width="504" frameborder="0" allowfullscreen title="Embedded post">
+
+</iframe>
+
+<blockquote class="twitter-tweet">
+
+<p lang="en" dir="ltr">
+
+Loved the networking and tours at <a href="https://twitter.com/AustralianBG?ref_src=twsrc%5Etfw">@AustralianBG</a>. Did y'all know they use medical x-rays to check seed viability.<br><br>Thank you for this amazing mini-conference between <a href="https://twitter.com/EERC_UNSW?ref_src=twsrc%5Etfw">@EERC_UNSW</a> <a href="https://twitter.com/BotanicSydney?ref_src=twsrc%5Etfw">@BotanicSydney</a> and <a href="https://twitter.com/NSWDPE?ref_src=twsrc%5Etfw">@NSWDPE</a>! <a href="https://t.co/XVKxn83g8N">pic.twitter.com/XVKxn83g8N</a>
+
+</p>
+
+--- Karina Guo (she/her) (@dandy_gumnut) <a href="https://twitter.com/dandy_gumnut/status/1694858240461582579?ref_src=twsrc%5Etfw">August 24, 2023</a>
+
+</blockquote>
+
+```{=html}
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+```
 <blockquote class="twitter-tweet">
 
 <p lang="en" dir="ltr">

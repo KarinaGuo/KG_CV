@@ -19,5 +19,14 @@
   },
   "posts/ML-project-two/index.qmd": {
     "index.html": "f9157e0c"
+  },
+  "posts/spotify/index.qmd": {
+    "index.html": "882dd5c4"
+  },
+  "posts/ESA/index.qmd": {
+    "index.html": "a8187c64"
+  },
+  "posts/ESA/index_test.qmd": {
+    "index_test.html": "46d2aa2f"
   }
 }
