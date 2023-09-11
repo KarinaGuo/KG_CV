@@ -13,9 +13,9 @@ format:
 
 I once got asked what music did I like. An admittedly, common small talk question that definitely has popped up more than once in life. But like every other time it's been asked, I've never known how to answer it. So hey, why not interrogate Spotify to see some answers? Here, I've included the code and steps needed to get similar outputs to what I have here.
 
-You'll have to first request your data from Spotify. To do this... Note that your extended streaming history may take a week or more to come.
+You'll have to first request your data from Spotify. To do this go to Spotify on the web. Press on your profile picture -\> Account -\> Privacy Settings -\> Scroll down, tick the boxes you want and your data will come in your email when it's ready. Note that your extended streaming history may take a week or more to come.
 
-Once downloaded, you'll want to set up a unique API that links to your account. Basically giving you a way to access their database. To do that you need to make a Spotify Developer account, that will let you set up a project that will have your 'Client_ID' and your 'Client_Secret'.
+Once downloaded, you'll want to set up a unique API that links to your account. Basically giving you a way to access their database. To do that you need to make a Spotify Developer account, that will let you set up a project that will have your 'Client_ID' and your 'Client_Secret'. Here's the official [page](https://developer.spotify.com/documentation/web-api) to help get that set up for you. Note when the page prompts you to put in a callback URL, a good default is inputting a 'localhost' e.g., http://localhost:1410/". This simply redirects output onto your personal device's browser.
 
 ``` r
 # Setting up API tokens
@@ -459,6 +459,7 @@ ggplot (extended_artist_freq_sort_top100, aes (x = artist, y = n, fill = artist)
   theme (axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "none") +
   labs (x = "Artists", y = "Count", title = "Top 100 artists in all streaming history")
 ```
+
 ![](Plots/top100_artists.jpg){fig-align="center"}
 
 ### Top 10 artist's hours listened
