@@ -17,7 +17,7 @@ about:
 
 ------------------------------------------------------------------------
 
-<p>“I smile when I hear my colleagues say “I discovered X.” That’s kind of like Columbus claiming to have discovered America. It was here all along, it’s just that he didn’t know it. Experiments are not about discovery but about listening and translating the knowledge of other beings.” —Robin Wall Kimmerer</p>
+<p>I smile when I hear my colleagues say "I discovered X." That's kind of like Columbus claiming to have discovered America. It was here all along, it's just that he didn't know it. Experiments are not about discovery but about listening and translating the knowledge of other beings. ---Robin Wall Kimmerer</p>
 
 ------------------------------------------------------------------------
 
@@ -46,16 +46,27 @@ Bacherlor's of Advanced Science (Hons.) major in Ecology and minor in Chemistry
 
 <details>
 
+<summary>**PhD Student (University of Sydney)\
+***(Feb 2024 - Current)* </summary>
+
+-   Attended workshops of Clearer Writing, Peer Review
+
+</details>
+
+<details>
+
 <summary>**Botanic Gardens of Sydney; Research Centre of Ecosystem Resilience (ReCER, BGSyd)** *(March 2022 - Current)*\
 *Technical Officer Biodiversity Genomics*</summary>
+
+-   Manipulation of genetic data for further analysis including variant calling and filtering.
+
+-   Conducting GWAS on individuals of *Melaleuca quinquenervia* to discover loci that signify rust resistance. Using discovered loci for genomic prediction models.
 
 -   Wet lab work on Lenwebbia sp & Gossia frangratissima for successful extraction of high molecular weight DNA full genome sequencing. Includes ability to safely work with liquid nitrogen, CTAB buffers, rare earth metal clean up, DNA purification and quantification through NanoDrop One & Agilent Tape.
 
 -   Refactoring of the genetics processing of DArT SNP data for the [Restore and Renew (RnR) webtool](https://www.restore-and-renew.org.au/). Involved version control using Git, containerising the RnR genetics workflow on Docker, multi-stage builds of workflow, supporting project development, and outreach. Showed proficiency in collaborating with other team members to enhance existing workflows and develop new features for future pathways of the tool.
 
--   Manipulation of genetic data for further analysis including variant calling and filtering.
-
--   Conducting GWAS on individuals of *Melaleuca quinquenervia* to discover markers that signify rust resistance
+-   Myrtle rust (*Austropuccinia psidii*) inoculation and scoring of Plant Breeding Information to distinguish between susceptible and resistant individuals against the disease.
 
 -   Managing \~70,000 samples through databasing collection information, maintenance, and organisation of their storage. Processing of incoming material in preparation of new samples and vouchers.
 
@@ -77,7 +88,31 @@ Bacherlor's of Advanced Science (Hons.) major in Ecology and minor in Chemistry
 -   **Ecological Society of Australia 2023**\
     Talk: Restore and Renew, Provenancing for restoration based on genetics and climate
 
+-   **Landcoast2Tops Landcare Talk**\
+    Talk: Introduction to Myrtle rust and Project on M. quinquenervia
+
+-   **Friends of Ivanhoe Botanic Gardens**\
+    Talk: Introduction to Myrtle rust and Project on M. quinquenervia
+
 #### Projects
+
+<details>
+
+<summary>**Deciphering the genetic basis of Myrtle rust (*Austropuccinia psidii)* resistance in *Melaleuca quinquenervia***</summary>
+
+-   Iterating through variations of filtering VCF files of whole genome sequenced individuals of Melaleuca quinquenervia
+
+-   Conducting association studies between genotype and phenotype (Myrtle rust resistance) using Genome Wide Association Studies of the aforementioned whole genome sequenced individuals
+
+-   Conducting phylogenetic analyses (IQ-TREE2 and Astral) using BUSCO IDs between broad leaf Melaleuca species.
+
+-   Inferred patterns of population genetic variation using Principal Component Analysis, conStruct and SNMF.
+
+-   Tested for introgression between Melaleuca spp. by performing ABBA BABA tests, implemented in DSuite
+
+-   Estimated the demographic history using SMC++
+
+</details>
 
 <details>
 

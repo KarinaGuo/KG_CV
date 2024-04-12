@@ -2,9 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/social-outreach/index.html",
       "/posts/spotify/index.html",
       "/posts/ESA/index.html",
-      "/posts/social-outreach/index.html",
       "/posts/ML-project-two/index.html",
       "/posts/ML-project-one/index.html"
     ]
